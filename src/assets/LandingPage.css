@@ -1,0 +1,481 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.project-overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin: 40px 0 75px 0;
+}
+
+.project-overview .project-info {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-overview .project-info h1 {
+  font-size: 50px;
+  margin: 0;
+}
+
+.project-overview .project-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.project-overview .project-controls button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.project-overview .project-controls span {
+  font-size: 18px;
+}
+
+.project-overview .view-project {
+  font-size: 400;
+  display: inline-block;
+  padding: 15px 25px;
+  background: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin-top: auto;
+}
+
+.project-overview .project-image {
+  position: relative;
+  width: 770px;
+  height: 830px;
+}
+
+.project-overview .project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-overview .project-image .view-project {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .project-overview {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-overview .project-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-overview .project-image .view-project {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .project-overview .project-info {
+    align-items: center;
+    text-align: center;
+  }
+
+  .project-overview .project-info h1 {
+    font-size: 40px;
+  }
+
+  .project-overview .project-controls {
+    justify-content: center;
+  }
+
+  .project-overview .project-controls button,
+  .project-overview .project-controls span {
+    font-size: 16px;
+  }
+}
+
+.about {
+  padding: 40px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 75px;
+}
+
+.about-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+.aboutImage1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.aboutImage2 {
+  grid-area: 1 / 2 / 3 / 3;
+}
+.aboutImage3 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #bdbdbd;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.about-text a {
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 2px;
+  transition: all 0.3s ease;
+}
+
+.about-text a:hover {
+  color: #000;
+}
+
+.about-text a::after {
+  content: " →";
+  transition: transform 0.3s ease;
+}
+
+.about-text a:hover::after {
+  transform: translateX(5px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-images {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .about-images img:nth-child(2) {
+    grid-row: 2 / 3;
+  }
+
+  .about-images img:nth-child(3) {
+    grid-row: 3 / 4;
+  }
+}
+
+.mission {
+  text-align: center;
+  padding: 60px 20px;
+  margin-bottom: 75px;
+}
+
+.mission h2 {
+  font-size: 48px;
+  color: #bdbdbd;
+  margin-bottom: 40px;
+  font-weight: 200; /* Thinner font weight */
+}
+
+.mission-statements {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+}
+
+.mission-statement {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.mission-statement h3 {
+  font-size: 140px;
+  color: #f2f2f2;
+  margin: 0;
+  line-height: 1;
+}
+
+.mission-statement p {
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.5;
+  max-width: 300px; /* Added max-width to control text width */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .mission-statements {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mission-statement {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mission-statement h3 {
+    font-size: 100px;
+  }
+}
+
+.projects {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 48px;
+  color: #bdbdbd;
+  margin-bottom: 40px;
+  font-weight: 200; /* Thinner font weight */
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.project-image-1 {
+  grid-area: 1 / 1 / 2 / 3;
+}
+.project-image-2 {
+  grid-area: 1 / 3 / 2 / 5;
+}
+.project-image-3 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.project-image-4 {
+  grid-area: 2 / 2 / 3 / 4;
+}
+.project-image-5 {
+  grid-area: 2 / 4 / 3 / 5;
+}
+
+.all-projects {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 75px;
+}
+
+.all-projects-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #333333;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 200; /* Thinner font weight */
+  font-size: 14px; /* Ensure the font size matches the design */
+  border-radius: 0; /* Remove border-radius if the design doesn't have rounded corners */
+  transition: background 0.3s ease;
+  border: 1px solid #333333; /* Add border for a defined button edge */
+}
+
+.all-projects-btn:hover {
+  background: #555555;
+  border-color: #555555; /* Change border color on hover for consistency */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+  .project-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-image-1 {
+    grid-column: span 1;
+  }
+}
+
+.zoom-hover {
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoom-hover:hover img {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+
+.contact {
+  margin: 60px 0;
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+.contact h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.contact form button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #333333;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 200; /* Thinner font weight */
+  font-size: 14px; /* Ensure the font size matches the design */
+  border-radius: 0; /* Remove border-radius if the design doesn't have rounded corners */
+  transition: background 0.3s ease;
+  border: 1px solid #333333; /* Add border for a defined button edge */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.contact form button:hover {
+  background: #555555;
+  border-color: #555555; /* Change border color on hover for consistency */
+}
+
+.contact-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+
+.contact-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.projects-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.project-card .project-title {
+  position: absolute;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  background: none;
+}
+
+.zoom-hover img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.overflow {
+  overflow: hidden;
+}
